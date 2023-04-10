@@ -227,12 +227,12 @@ LIMIT 20;
 /*
 category    |title                                             |growth_30_days|
 ------------+--------------------------------------------------+--------------+
-CASINO      |Dummy ดัมมี่ ไพ่แคง เกมไพ่ฟรี                     		   |     227106.00|
+CASINO      |Dummy ดัมมี่ ไพ่แคง เกมไพ่ฟรี                          |     227106.00|
 TRIVIA      |Gartic                                            |      69928.50|
 CARD        |Belote.com - Free Belote Game                     |      55880.60|
 CARD        |Durak Online                                      |      37994.40|
 TRIVIA      |New QuizDuel!                                     |      28062.90|
-ROLE PLAYING|세븐나이츠                                           |      17025.00|
+ROLE PLAYING|세븐나이츠                                         |      17025.00|
 ADVENTURE   |Mini World: Block Art                             |      15364.20|
 RACING      |Truck Driver Cargo                                |      12602.30|
 SPORTS      |Mobile Soccer League                              |       9750.20|
@@ -262,7 +262,7 @@ category   |title                                             |growth_60_days|
 CARD       |Domino QiuQiu 2020 - Domino 99 · Gaple online     |     69441.400|
 BOARD      |Carrom King™ - Best Online Carrom Board Pool Game |     42875.200|
 STRATEGY   |Castle Clash: Схватка Гильдий                     |     41869.700|
-BOARD      |인생역전윷놀이                                         |     15483.900|
+BOARD      |인생역전윷놀이                                     |     15483.900|
 ACTION     |Special Forces Group 2                            |      7584.900|
 RACING     |Racing Fever: Moto                                |      6004.400|
 WORD       |Aplasta Palabras：Juego de Palabras Gratis sin wifi|      5556.200|
@@ -290,7 +290,7 @@ LIMIT 10;
 /*
 category   |title                                             |high_ratings_prop|
 -----------+--------------------------------------------------+-----------------+
-EDUCATIONAL|超級單字王 - 英檢、多益、托福 輕鬆學                   |             0.98|
+EDUCATIONAL|超級單字王 - 英檢、多益、托福 輕鬆學                 |             0.98|
 PUZZLE     |Indy Cat for VK                                   |             0.97|
 PUZZLE     |Sudoku                                            |             0.97|
 EDUCATIONAL|Английский для Начинающих: LinDuo HD              |             0.96|
@@ -315,7 +315,7 @@ SPORTS    |Futsal Football 2                                 |            0.55|
 MUSIC     |Au Mobile VTC – Game nhảy Audition                |            0.45|
 MUSIC     |Piano Music Tiles 2 - Free Music Games            |            0.43|
 TRIVIA    |TopQuiz -Play Quiz & Lottery | Win Money via Paytm|            0.42|
-BOARD     |모두의마블                                           |            0.41|
+BOARD     |모두의마블                                         |            0.41|
 TRIVIA    |New QuizDuel!                                     |            0.38|
 TRIVIA    |Live Quiz Games App, Trivia & Gaming App for Money|            0.36|
 SIMULATION|Taxi Game                                         |            0.35|
