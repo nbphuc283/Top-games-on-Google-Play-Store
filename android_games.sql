@@ -57,108 +57,108 @@ UPDATE android_games
 SET "average rating" = (("5 star ratings"::NUMERIC * 5 + "4 star ratings"::NUMERIC * 4 + "3 star ratings"::NUMERIC * 3 + "2 star ratings"::NUMERIC * 2 + "1 star ratings"::NUMERIC)/"total ratings"::NUMERIC);
 
 /* Calculate number of games that passed each install milestones, by each category */
-SELECT category, installs, COUNT(installs) FROM android_games
+SELECT installs, category, COUNT(installs) FROM android_games
 GROUP BY 1, 2
-ORDER BY 1, 2 DESC;
+ORDER BY 1 DESC, 2;
 
 /* 
-category    |installs  |count|
-------------+----------+-----+
-ACTION      | 500000000|    4|
-ACTION      | 100000000|   37|
-ACTION      |  50000000|   28|
-ACTION      |  10000000|   31|
-ADVENTURE   | 100000000|    6|
-ADVENTURE   |  50000000|   10|
-ADVENTURE   |  10000000|   63|
-ADVENTURE   |   5000000|   13|
-ADVENTURE   |   1000000|    8|
-ARCADE      |1000000000|    1|
-ARCADE      | 500000000|    1|
-ARCADE      | 100000000|   41|
-ARCADE      |  50000000|   25|
-ARCADE      |  10000000|   31|
-ARCADE      |   1000000|    1|
-BOARD       | 500000000|    1|
-BOARD       | 100000000|    5|
-BOARD       |  50000000|   11|
-BOARD       |  10000000|   42|
-BOARD       |   5000000|   28|
-BOARD       |   1000000|   13|
-CARD        |  50000000|    3|
-CARD        |  10000000|   35|
-CARD        |   5000000|   28|
-CARD        |   1000000|   32|
-CARD        |    500000|    2|
-CASINO      |  50000000|    5|
-CASINO      |  10000000|   35|
-CASINO      |   5000000|   28|
-CASINO      |   1000000|   31|
-CASINO      |    500000|    1|
-CASUAL      |1000000000|    1|
-CASUAL      | 500000000|    3|
-CASUAL      | 100000000|   24|
-CASUAL      |  50000000|   18|
-CASUAL      |  10000000|   49|
-CASUAL      |   5000000|    3|
-CASUAL      |   1000000|    2|
-EDUCATIONAL | 100000000|    4|
-EDUCATIONAL |  50000000|   14|
-EDUCATIONAL |  10000000|   64|
-EDUCATIONAL |   5000000|    8|
-EDUCATIONAL |   1000000|    9|
-EDUCATIONAL |    500000|    1|
-MUSIC       | 100000000|    5|
-MUSIC       |  50000000|    5|
-MUSIC       |  10000000|   36|
-MUSIC       |   5000000|   22|
-MUSIC       |   1000000|   27|
-MUSIC       |    500000|    3|
-MUSIC       |    100000|    2|
-PUZZLE      | 100000000|   17|
-PUZZLE      |  50000000|   28|
-PUZZLE      |  10000000|   50|
-PUZZLE      |   5000000|    4|
-PUZZLE      |   1000000|    1|
-RACING      | 500000000|    1|
-RACING      | 100000000|   23|
-RACING      |  50000000|   26|
-RACING      |  10000000|   47|
-RACING      |   5000000|    3|
-ROLE PLAYING| 100000000|    4|
-ROLE PLAYING|  50000000|    6|
-ROLE PLAYING|  10000000|   58|
-ROLE PLAYING|   5000000|   24|
-ROLE PLAYING|   1000000|    8|
-SIMULATION  | 100000000|   12|
-SIMULATION  |  50000000|   18|
-SIMULATION  |  10000000|   65|
-SIMULATION  |   5000000|    4|
-SIMULATION  |   1000000|    1|
-SPORTS      | 500000000|    1|
-SPORTS      | 100000000|   11|
-SPORTS      |  50000000|   23|
-SPORTS      |  10000000|   58|
-SPORTS      |   5000000|    6|
-SPORTS      |   1000000|    1|
-STRATEGY    | 500000000|    1|
-STRATEGY    | 100000000|    6|
-STRATEGY    |  50000000|   13|
-STRATEGY    |  10000000|   53|
-STRATEGY    |   5000000|   21|
-STRATEGY    |   1000000|    6|
-TRIVIA      | 100000000|    2|
-TRIVIA      |  50000000|    1|
-TRIVIA      |  10000000|   28|
-TRIVIA      |   5000000|   24|
-TRIVIA      |   1000000|   36|
-TRIVIA      |    500000|    8|
-TRIVIA      |    100000|    1|
-WORD        | 100000000|    1|
-WORD        |  50000000|    8|
-WORD        |  10000000|   54|
-WORD        |   5000000|   21|
-WORD        |   1000000|   16|
+installs  |category    |count|
+----------+------------+-----+
+1000000000|ARCADE      |    1|
+1000000000|CASUAL      |    1|
+ 500000000|ACTION      |    4|
+ 500000000|ARCADE      |    1|
+ 500000000|BOARD       |    1|
+ 500000000|CASUAL      |    3|
+ 500000000|RACING      |    1|
+ 500000000|SPORTS      |    1|
+ 500000000|STRATEGY    |    1|
+ 100000000|ACTION      |   37|
+ 100000000|ADVENTURE   |    6|
+ 100000000|ARCADE      |   41|
+ 100000000|BOARD       |    5|
+ 100000000|CASUAL      |   24|
+ 100000000|EDUCATIONAL |    4|
+ 100000000|MUSIC       |    5|
+ 100000000|PUZZLE      |   17|
+ 100000000|RACING      |   23|
+ 100000000|ROLE PLAYING|    4|
+ 100000000|SIMULATION  |   12|
+ 100000000|SPORTS      |   11|
+ 100000000|STRATEGY    |    6|
+ 100000000|TRIVIA      |    2|
+ 100000000|WORD        |    1|
+  50000000|ACTION      |   28|
+  50000000|ADVENTURE   |   10|
+  50000000|ARCADE      |   25|
+  50000000|BOARD       |   11|
+  50000000|CARD        |    3|
+  50000000|CASINO      |    5|
+  50000000|CASUAL      |   18|
+  50000000|EDUCATIONAL |   14|
+  50000000|MUSIC       |    5|
+  50000000|PUZZLE      |   28|
+  50000000|RACING      |   26|
+  50000000|ROLE PLAYING|    6|
+  50000000|SIMULATION  |   18|
+  50000000|SPORTS      |   23|
+  50000000|STRATEGY    |   13|
+  50000000|TRIVIA      |    1|
+  50000000|WORD        |    8|
+  10000000|ACTION      |   31|
+  10000000|ADVENTURE   |   63|
+  10000000|ARCADE      |   31|
+  10000000|BOARD       |   42|
+  10000000|CARD        |   35|
+  10000000|CASINO      |   35|
+  10000000|CASUAL      |   49|
+  10000000|EDUCATIONAL |   64|
+  10000000|MUSIC       |   36|
+  10000000|PUZZLE      |   50|
+  10000000|RACING      |   47|
+  10000000|ROLE PLAYING|   58|
+  10000000|SIMULATION  |   65|
+  10000000|SPORTS      |   58|
+  10000000|STRATEGY    |   53|
+  10000000|TRIVIA      |   28|
+  10000000|WORD        |   54|
+   5000000|ADVENTURE   |   13|
+   5000000|BOARD       |   28|
+   5000000|CARD        |   28|
+   5000000|CASINO      |   28|
+   5000000|CASUAL      |    3|
+   5000000|EDUCATIONAL |    8|
+   5000000|MUSIC       |   22|
+   5000000|PUZZLE      |    4|
+   5000000|RACING      |    3|
+   5000000|ROLE PLAYING|   24|
+   5000000|SIMULATION  |    4|
+   5000000|SPORTS      |    6|
+   5000000|STRATEGY    |   21|
+   5000000|TRIVIA      |   24|
+   5000000|WORD        |   21|
+   1000000|ADVENTURE   |    8|
+   1000000|ARCADE      |    1|
+   1000000|BOARD       |   13|
+   1000000|CARD        |   32|
+   1000000|CASINO      |   31|
+   1000000|CASUAL      |    2|
+   1000000|EDUCATIONAL |    9|
+   1000000|MUSIC       |   27|
+   1000000|PUZZLE      |    1|
+   1000000|ROLE PLAYING|    8|
+   1000000|SIMULATION  |    1|
+   1000000|SPORTS      |    1|
+   1000000|STRATEGY    |    6|
+   1000000|TRIVIA      |   36|
+   1000000|WORD        |   16|
+    500000|CARD        |    2|
+    500000|CASINO      |    1|
+    500000|EDUCATIONAL |    1|
+    500000|MUSIC       |    3|
+    500000|TRIVIA      |    8|
+    100000|MUSIC       |    2|
+    100000|TRIVIA      |    1|
 */
 
 /* Calculate the average number of ratings for each category */
